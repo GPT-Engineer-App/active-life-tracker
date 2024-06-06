@@ -1,4 +1,5 @@
-import { Box, Container, Flex, Heading, Text, VStack, HStack, IconButton } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, Text, VStack, HStack, IconButton, Link } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 import { FaDumbbell, FaAppleAlt, FaChartLine } from "react-icons/fa";
 
 const Index = () => {
@@ -7,7 +8,7 @@ const Index = () => {
       <Flex as="nav" bg="blue.600" color="white" p={4} justifyContent="space-between" alignItems="center">
         <Heading size="lg">Fitness Tracker</Heading>
         <HStack spacing={4}>
-          <Text>Workouts</Text>
+          <Link as={RouterLink} to="/workout-log">Workouts</Link>
           <Text>Diet</Text>
           <Text>Progress</Text>
         </HStack>

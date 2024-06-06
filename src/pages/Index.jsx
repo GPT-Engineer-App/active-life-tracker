@@ -1,6 +1,6 @@
 import { Box, Container, Flex, Heading, Text, VStack, HStack, IconButton, Link } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
-import { FaDumbbell, FaAppleAlt, FaChartLine } from "react-icons/fa";
+import { FaDumbbell, FaAppleAlt, FaChartLine, FaChartPie } from "react-icons/fa";
 
 const Index = () => {
   return (
@@ -10,7 +10,7 @@ const Index = () => {
         <HStack spacing={4}>
           <Link as={RouterLink} to="/workout-log">Workouts</Link>
           <Text>Diet</Text>
-          <Text>Progress</Text>
+          <Link as={RouterLink} to="/progress-tracking">Progress</Link>
         </HStack>
       </Flex>
 
@@ -41,6 +41,16 @@ const Index = () => {
             <VStack align="start">
               <Heading size="md">Check Your Progress</Heading>
               <Text>View your fitness journey and milestones achieved.</Text>
+            </VStack>
+          </HStack>
+        </Box>
+
+        <Box w="full" p={4} bg="gray.100" borderRadius="md" boxShadow="md">
+          <HStack spacing={4}>
+            <IconButton aria-label="Progress Tracking" icon={<FaChartPie />} size="lg" isRound />
+            <VStack align="start">
+              <Heading size="md">Track Your Progress</Heading>
+              <Text>Log your weight, body measurements, and other metrics over time.</Text>
             </VStack>
           </HStack>
         </Box>
